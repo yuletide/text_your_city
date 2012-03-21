@@ -1,6 +1,10 @@
 # Django settings for mysite project.
 import os
 
+#BASE_PATH = os.path.dirname(os.path.dirname(__file__))
+#TEST_DISCOVERY_ROOT = os.path.join(BASE_PATH, "tests")
+#TEST_RUNNER = "tests.runner.DiscoveryRunner"
+
 PROJECT_DIR = os.path.dirname(__file__)
 
 DEBUG = True 
@@ -103,7 +107,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'mysite.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
