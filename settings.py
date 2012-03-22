@@ -18,7 +18,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-	'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+    'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'djangotutorial',                      # Or path to database file if using sqlite3.
         'USER': 'postgres',                      # Not used with sqlite3.
         'PASSWORD': 'postgres',                  # Not used with sqlite3.
@@ -124,9 +124,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'polls'
 )
@@ -140,19 +138,19 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
-	'simple': {
-	    'format': '%(levelname)s %(message)s'
-	},
-	'verbose': {
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+        'verbose': {
             'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
         },
     },
     'handlers': {
-	'console': {
-	    'level': 'DEBUG',
-	    'class': 'logging.StreamHandler',
-	    'formatter': 'simple'
-	},
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
         'mail_admins': {
             'level': 'ERROR',
             'class': 'logging.StreamHandler'
@@ -164,9 +162,9 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
-	'polls.custom': {
-	    'handlers': ['console', 'mail_admins'],
-	    'level': 'INFO',
-	}
+        'polls.custom': {
+            'handlers': ['console', 'mail_admins'],
+            'level': 'INFO',
+        }
     }
 }

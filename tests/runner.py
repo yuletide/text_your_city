@@ -2,7 +2,7 @@ from django.test.simple import DjangoTestSuiteRunner
 
 class DiscoveryRunner(DjangoTestSuiteRunner):
     """A test suite runner using unittest2 discovery."""
-    def build_suite(self, test_labels):
+    def build_suite(self, test_labels, **kwargs):
 
         suite = None
         discovery_root = settings.TEST_DISCOVERY_ROOT
