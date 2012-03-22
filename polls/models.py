@@ -10,8 +10,8 @@ class Poll(models.Model):
     question = models.CharField(max_length=200)
     edit_date = models.DateTimeField(auto_now=True)
     created_date = models.DateTimeField(auto_now_add=True)
-    open_date = models.DateTimeField('start date of poll')
-    close_date = models.DateTimeField('end date of poll')
+    start_date = models.DateTimeField('start date of poll')
+    end_date = models.DateTimeField('end date of poll')
     poll_number = models.CharField(max_length=15)
     
     poll_type = models.CharField(max_length=20, choices=POLL_TYPE_CHOICES)
@@ -20,7 +20,7 @@ class Poll(models.Model):
 	return self.question 
 
     def is_open(self):
-        if open_date <= datetime.date.now() <= close_date:
+        if start_date <= datetime.date.now() <= end_date:
             return True
         else:
             return False
