@@ -1,9 +1,9 @@
 # Django settings for mysite project.
 import os
 
-#BASE_PATH = os.path.dirname(os.path.dirname(__file__))
-#TEST_DISCOVERY_ROOT = os.path.join(BASE_PATH, "tests")
-#TEST_RUNNER = "tests.runner.DiscoveryRunner"
+BASE_PATH = os.path.dirname(__file__)
+TEST_DISCOVERY_ROOT = os.path.join(BASE_PATH, "tests")
+TEST_RUNNER = "tests.runner.DiscoveryDjangoTestSuiteRunner"
 
 PROJECT_DIR = os.path.dirname(__file__)
 
@@ -14,7 +14,7 @@ ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
 
-MANAGERS = ADMINS
+MANAGERS = ADMINS   
 
 DATABASES = {
     'default': {
